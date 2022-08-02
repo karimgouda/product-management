@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>product management</title>
+</head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Edu+NSW+ACT+Foundation:wght@600&family=Edu+TAS+Beginner:wght@600&family=Edu+VIC+WA+NT+Beginner:wght@400;500;600;700&family=Open+Sans:ital,wght@0,500;1,300&family=Oswald&family=Roboto:ital,wght@1,100&display=swap');
+
+    body
+    {
+        font-family: 'Edu NSW ACT Foundation', cursive;
+
+        background-color:black;
+        color: white;
+    }
+    input , textarea
+    {
+        background-color: black !important;
+        color: white !important;
+    }
+</style>
+<body>
+
+    <h1 class="text-center py-5">product management system  <i class="fa-solid fa-bars-progress mx-1 text-danger align-items-center"></i></h1>
+
+    
+    <div class=" w-75 m-auto">
+        <label class=" w-100  m-auto text-center my-2 fs-2" > Search Product.. <i class="fa-brands fa-searchengin mx-1 fs-2 text-primary"></i> </label>
+        <input oninput="searchProduct(this.value)" type="text" placeholder="Search Product" class=" form-control w-75 m-auto my-2" id="search">
+
+    </div>
+
+
+
+    <table class=" table w-75 m-auto">
+        <thead>
+            <tr>
+                <th class=" text-info">Index</th>
+                <th class=" text-info">Name Product</th>
+                <th class=" text-info">Price Product </th>
+                <th class=" text-info"> Catogery </th>
+                <th class=" text-info"> Description </th>
+                <th class="text-warning"> Up Date <i class="fa-regular fa-pen-to-square"></i> </th>
+                <th class=" text-danger"> Delete <i class="fa-solid fa-calendar-xmark mx-1"></i> </th>
+            </tr>
+        </thead>
+
+        <tbody id="tBody">
+
+            
+           
+
+        </tbody>
+    </table>
+
+    <div class="w-75 m-auto">
+    <label for="nameProductInput" class="form-control bg-dark border-0 text-white" >Name Product:</label>
+    <input oninput="valditionProudct()" type="text" class="   form-control my-3" placeholder="Name Product" id="nameProductInput">
+
+    <label for="priceProductInput" class="form-control bg-dark border-0 text-white">Price Product:</label>
+    <input oninput="valditionNumper()" type="number" class="  form-control my-3" placeholder="Price Product" id="priceProductInput">
+
+    <label for="catogeryProductInput" class="form-control bg-dark border-0 text-white">Catogery Product:</label>
+    <input oninput="valditionCat()" type="text" class="  form-control my-3" placeholder="Catogery Product" id="catogeryProductInput">
+
+    <label for="descriptionProductInput" class="form-control bg-dark border-0 text-white">Description Product:</label>
+    <textarea oninput="typetext()" class="  form-control my-3" placeholder="Description Product" id="descriptionProductInput"></textarea>
+
+    <div id="container">
+        <button onclick="addProudct()" class="btn btn-outline-info text-white">Add Product <i class="fa-solid fa-circle-plus mx-1"></i></button>
+    </div>
+    </div>
+    
+
+
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
